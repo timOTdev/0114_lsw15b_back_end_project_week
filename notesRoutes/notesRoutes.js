@@ -11,5 +11,12 @@ router.route('/')
       .then(notes => res.status(200).json(notes))
       .catch(err => res.status(500).json({ error: 'Could not retrieve any notes.' }))
   })
+  .post((req, res) => {
+    const note = req.body
+    db.insert(note)
+      .into('notes')
+      .then(note => res.status(201).json(note))
+      .catch(err => res.status(500).json({ error: 'The note could not be added.' }))
+  })
 
 module.exports = router
