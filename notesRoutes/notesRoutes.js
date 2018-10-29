@@ -19,7 +19,7 @@ router.route('/')
       .catch(err => res.status(500).json({ error: 'The note could not be added.' }))
   })
 
-router.route('/:id')
+router.route('/:id/edit')
   .put((req, res) => {
     const { id } = req.params
     const changedNote = req.body
