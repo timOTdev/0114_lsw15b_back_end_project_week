@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/timh1203/lsw15-backEndProjectWeek#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.4",
     "helmet": "^3.14.0",
     "knex": "^0.15.2",
