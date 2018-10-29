@@ -7,6 +7,6 @@ server.use(helmet())
 server.use(express.json())
 
 server.get('/', (req, res) => res.send("It's Alive"))
-server.get('/notes', notesRoutes)
+server.use('/notes', notesRoutes)
 
 server.listen(9000, () => console.log('\nAPI running on 9k\n'))

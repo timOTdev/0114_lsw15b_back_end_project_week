@@ -11,3 +11,5 @@ router.route('/')
       .then(notes => res.status(200).json(notes))
       .catch(err => res.status(500).json({ error: 'Could not retrieve any notes.' }))
   })
+
+module.exports = router
