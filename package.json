@@ -1,0 +1,29 @@
+{
+  "name": "lsw15-backEndProjectWeek",
+  "description": "Lambda School Week 15: Back End Project Week",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timh1203/lsw15-backEndProjectWeek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timh1203/lsw15-backEndProjectWeek/issues"
+  },
+  "homepage": "https://github.com/timh1203/lsw15-backEndProjectWeek#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.14.0",
+    "knex": "^0.15.2",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  },
+}
