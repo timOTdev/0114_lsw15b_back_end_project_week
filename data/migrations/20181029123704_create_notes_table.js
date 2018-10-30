@@ -4,6 +4,7 @@ exports.up = function (knex, Promise) {
     tb.increments();
     tb.string('title', 255).notNullable();
     tb.string('text', 255).notNullable();
+    tb.string('tags', 255).notNullable();
   });
 };
 
