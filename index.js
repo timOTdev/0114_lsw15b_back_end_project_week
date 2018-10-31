@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express')
 const helmet = require('helmet')
 const cors = require('cors');
@@ -11,4 +13,4 @@ server.use(express.json())
 server.get('/', (req, res) => res.send("It's Alive"))
 server.use('/notes', notesRoutes)
 
-server.listen(9000, () => console.log('\nAPI running on 9k\n'))
+server.listen(process.env.PORT, () => console.log(`\nAPI running on ${process.env.PORT}\n`))
