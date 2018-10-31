@@ -7,6 +7,8 @@ const localPg = {
   password: process.env.DB_PASS,
 };
 const dbConnection = process.env.DATABASE_URL || localPg;
+const dbEngine = process.env.DB || 'development';
+const config = require('../knexfile.js')[dbEngine];
 
 module.exports = {
   development: {
