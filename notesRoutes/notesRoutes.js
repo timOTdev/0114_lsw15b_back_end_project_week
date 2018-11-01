@@ -22,10 +22,10 @@ router.route('/')
 
 router.route('/:id')
   .delete((req, res) => {
-    const { id } = req.params
+    const id = Number(req.params.id)
     db('notes')
       .where({ id })
-      .delete(id)
+      .delete()
       .then(deletedNote => {
         if (!deletedNote || deletedNote < 1) return res.status(404).json({ error: 'The specified note could not be found.' })
         return res.status(202).json(deletedNote)
