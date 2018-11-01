@@ -4,7 +4,7 @@ const dbEngine = process.env.DB || 'development';
 const knexConfig = require('../knexfile.js')[dbEngine];
 
 const router = express.Router()
-const db = knex(knexConfig.development)
+const db = knex(knexConfig)
 
 router.route('/')
   .get((req, res) => {
